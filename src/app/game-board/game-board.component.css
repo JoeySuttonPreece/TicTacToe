@@ -1,0 +1,21 @@
+.board {
+    display: grid;
+    width: 70vmin;
+    height: 70vmin;
+    margin: auto;
+    padding: 2vmin;
+    row-gap: 2vmin;
+    column-gap: 2vmin;
+}
+
+.t-1 {
+    background-color: grey;
+}
+
+.t0 {
+    background-color: rgb(255, 127, 127);
+}
+
+.t1 {
+    background-color: rgb(127, 127, 255);
+}

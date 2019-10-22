@@ -1,0 +1,12 @@
+<div class='board t{{turn}}'>
+    <ng-container *ngFor='let row of board; let x = index'>
+        <ng-container *ngFor='let cell of row; let y = index'>
+            <game-piece [state]='cell' [x]='x' [y]='y' (selected)='move($event)' [ngStyle]='{
+                "grid-column-start": x + 1,
+                "grid-column-end": x + 2,
+                "grid-row-start": y + 1,
+                "grid-row-end": y + 2
+            }'></game-piece>
+        </ng-container>
+    </ng-container>
+</div>
