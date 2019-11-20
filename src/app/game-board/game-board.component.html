@@ -1,4 +1,4 @@
-<div class='board t{{turn}}'>
+<div class='board t{{ winner >= 0 ? winner : turn }}'>
     <ng-container *ngFor='let row of board; let x = index'>
         <ng-container *ngFor='let cell of row; let y = index'>
             <game-piece [state]='cell' [x]='x' [y]='y' (selected)='move($event)' [ngStyle]='{

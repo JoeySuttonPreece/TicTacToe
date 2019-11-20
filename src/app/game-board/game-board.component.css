@@ -4,8 +4,7 @@
     height: 70vmin;
     margin: auto;
     padding: 2vmin;
-    row-gap: 2vmin;
-    column-gap: 2vmin;
+    gap: 2vmin;
 }
 
 .t-1 {

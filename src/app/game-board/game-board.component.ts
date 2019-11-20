@@ -9,6 +9,7 @@ export class GameBoardComponent {
     size: number;
     board: number[][];
     turn: number;
+    winner: number;
 
     constructor() {
         this.size = 4;
@@ -46,6 +47,9 @@ export class GameBoardComponent {
             let tied = lines.every((line: Set<number>) => (line.size == (line.has(-1) ? 3 : 2)));
 
             if (win || tied) {
+                if (win) {
+                    this.winner = this.turn;
+                }
                 this.turn = -1;
             } else {
                 this.turn = (this.turn + 1) % 2;
